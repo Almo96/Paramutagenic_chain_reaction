@@ -1,0 +1,79 @@
+---
+title: "Untitled"
+output: github_document
+author: "Almo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{bash eval=FALSE}
+folder="/Users/ascarpa/Downloads/invadego_simulations/Paramutagenic_chain_reaction/Invasion_clusters"
+tool="/Users/ascarpa/invade-invadego/invadego021"
+mkdir $folder
+
+
+
+$tool --N 1000 --gen 5000 --genome mb:10,10,10,10,10 --cluster kb:300,300,300,300,300 --rr 4,4,4,4,4 --rep 100 --steps 20 -u 0.1 --basepop 100 --sampleid p00 > $folder/p0 &
+$tool --N 1000 --gen 5000 --genome mb:10,10,10,10,10 --cluster kb:300,300,300,300,300 --rr 4,4,4,4,4 --rep 100 --steps 20 -u 0.1 --basepop 100 --paramutation 100:1 --sampleid p50 > $folder/p1 &
+$tool --N 1000 --gen 5000 --genome mb:10,10,10,10,10 --cluster kb:300,300,300,300,300 --rr 4,4,4,4,4 --rep 100 --steps 20 -u 0.1 --basepop 100 --paramutation 10:0 --sampleid p10 > $folder/p10 &
+$tool --N 1000 --gen 5000 --genome mb:10,10,10,10,10 --cluster kb:300,300,300,300,300 --rr 4,4,4,4,4 --rep 100 --steps 20 -u 0.1 --basepop 100 --paramutation 1:0 --sampleid p100 > $folder/p100
+```
+## merge
+
+```{bash}
+cat p* |grep -v "^Invade"|grep -v "^#" > data-for.r
+```
+
+## Setting the environment
+``` {r}
+library(tidyverse)
+```
+
+# Invasion dynamics
+
+## Average TE copy numbers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## GitHub Documents
+
+This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
+
+## Including Code
+
+You can include R code in the document as follows:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
