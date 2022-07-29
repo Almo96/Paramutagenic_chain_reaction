@@ -21,7 +21,7 @@ Transposition rate
 ![t](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;t "t")
 Generation
 
-### Initial conditions:
+### Initial conditions
 
 ![c\_{0}=10](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;c_%7B0%7D%3D10 "c_{0}=10")
 
@@ -35,7 +35,7 @@ A chromosome of size 1Mb and no piRNA clusters. We used 500 replicates
 
 version: invadego0.2.1 seed: 1659093816078434000
 
-### Commands for the simulation:
+### Commands for the simulation
 
 ``` bash
 folder="/Users/ascarpa/Downloads/invadego_simulations/Paramutagenic_chain_reaction/Validation"
