@@ -59,7 +59,7 @@ $tool --N 250 --gen 20000 --genome mb:10,10,10,10,10 --cluster mb:1,1,1,1,1 --rr
 $tool --N 500 --gen 20000 --genome mb:10,10,10,10,10 --cluster mb:1,1,1,1,1 --rr 4,4,4,4,4 --rep 300 --u 0.0 --basepop 10000 --steps 10000 --sampleid pd500> $folder/validation_2_2 &  
 $tool --N 1000 --gen 20000 --genome mb:10,10,10,10,10 --cluster mb:1,1,1,1,1 --rr 4,4,4,4,4 --rep 300 --u 0.0 --basepop 10000 --steps 10000 --sampleid pd1000> $folder/validation_2_3
 
-cat drift-n*|awk '$2==20000' > 2022_08_01_Validation_2_Drift
+cat validation_2_1 validation_2_2 validation_2_3|awk '$2==20000' > 2022_08_01_Validation_2_Drift
 ```
 
 ### Visualization in R
